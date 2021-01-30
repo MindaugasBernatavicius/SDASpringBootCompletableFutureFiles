@@ -31,7 +31,7 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-    // TODO :: create threaded POST
+    // TODO :: create non-threaded POST for performance comparison
 
     @GetMapping(value = "/users", produces = "application/json")
     public CompletableFuture<ResponseEntity> findAllUsers() {
